@@ -102,6 +102,16 @@ var vkm = {
 		if (document.getElementById('wl_post')) {
 			this.render('groups_post', 'wl_post');
 		}
+		
+		//wall fixed
+		if (document.getElementById('wall_fixed')) {
+			this.render('wall_header', 'wall_fixed');
+		}
+
+		//wk box
+		if (document.getElementById('wk_box')) {
+			this.render('wall_box', 'wk_box');
+		}
 	},
 	render: function(type, container) {
 		var songsPre = document.getElementById(container).getElementsByTagName('input');
@@ -138,6 +148,8 @@ var vkm = {
 				case 'feed':
 				case 'groups':
 				case 'groups_post':
+				case 'wall_header':
+				case 'wall_box':
 					songContainer = song.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 					progressBar.style.width = '98%';
 					songContainer.getElementsByClassName('area')[0].insertBefore(progressBar, songContainer.getElementsByClassName('player')[0]);
@@ -203,6 +215,8 @@ var vkm = {
 				case 'wall':
 				case 'groups':
 				case 'groups_post':
+				case 'wall_header':
+				case 'wall_box':
 					//Save button only if 2 or more songs in container
 					var songsCount = params.songContainer.parentNode.getElementsByClassName('audio').length;
 					if(params.songContainer.parentNode.getElementsByClassName('vkm-saveAll').length == 0 && songsCount > 1) {
@@ -363,6 +377,8 @@ var vkm = {
 					case 'im':
 					case 'groups':
 					case 'groups_post':
+					case 'wall_header':
+					case 'wall_box':
 						dl.style.cssText = 'position: absolute; right: 10px; top: 8px';
 						params.songContainer.appendChild(dl);
 						info.innerText += ' | ';
@@ -444,6 +460,8 @@ var vkm = {
 					case 'search':
 					case 'groups':
 					case 'groups_post':
+					case 'wall_header':
+					case 'wall_box':
 						progressBar = songsPre[i].parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName('vkm-progressBar')[0];
 						break;
 					case 'audio':

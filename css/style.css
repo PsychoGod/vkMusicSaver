@@ -99,7 +99,7 @@
 }
 
 #album_filters .vkm-btn {
-	width: 150px;
+	width: 156px;
 	position: static;
 	margin: 2px 0px 1px 0;
 	text-align: center;
@@ -141,16 +141,17 @@
 }
 
 #pad_wrap .over .info .title_wrap {
-	width: 380px !important;
+	width: 370px !important;
 }
 
 #pad_wrap .audio .title_wrap {
-	width: 300px !important;;
+	width: 245px !important;
 }
 
 #pad_footer #vkm-cp .vkm-btn {
 	margin-top: -19px;
 	margin-left: 4px;
+	width: 76px !important;
 }
 
 /* --- */
@@ -177,7 +178,7 @@
 }
 
 #search_filters .vkm-btn {
-	width: 150px;
+	width: 156px;
 	position: static;
 	margin: 2px 8px 1px 0;
 	text-align: center;

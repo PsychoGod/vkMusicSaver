@@ -348,7 +348,7 @@ var vkm = {
 				var songKbps	=	Math.round( ( parseInt(params.size) / params.duration * 8 / 1000) / 16) * 16;
 				
 				var info = vkm.getInfo();
-				info.innerText = songSizeMB + ' MB | ' + songKbps + 'kbps';
+				info.innerText = songSizeMB + ' MB | ' + songKbps + ' kbps';
 
 				var dl = vkm.getDL();
 				dl.className = 'audio_edit_wrap fl_r vkm-download';
@@ -359,7 +359,7 @@ var vkm = {
 				switch(type) {
 					case 'audio':
 						info.innerText += ' | ';
-						info.style.cssText = 'position: absolute; top: 10px; left: 290px';
+						info.style.cssText = 'position: absolute; text-align: right; top: 11px; margin-left: 285px';
 						dl.style.cssText = 'margin-top: 10px';
 						params.songContainer.appendChild(info);
 						params.songContainer.getElementsByClassName('actions')[0].appendChild(dl);
@@ -389,7 +389,7 @@ var vkm = {
 					case 'popup':
 						info.innerText += ' | ';
 						info.style.cssText = 'position: absolute; top: 10px; right: 36px';
-						dl.style.cssText = 'position: absolute; top: 11px; right: 35px';
+						dl.style.cssText = 'position: absolute; top: 11px; right: 15px';
 						params.songContainer.appendChild(info);
 						params.songContainer.getElementsByClassName('actions')[0].appendChild(dl);
 						break;
